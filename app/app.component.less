@@ -1,0 +1,256 @@
+// out: app.component.css, compress:true, sourceMap:false
+
+/* < dev debug styles */
+.grybox
+{
+    border: 1px solid #999;
+    background-color: #ccc;
+}
+.redbox
+{
+    border: 1px solid red;
+    background-color: #EA6969;
+}
+.ornjbox
+{
+    border: 1px solid orange;
+    background-color: #FFB948;
+}
+.blubox
+{
+    border: 1px solid blue;
+    background-color: #B6BBFF;
+}
+.grnbox
+{
+    border: 1px solid green;
+    background-color: #AEFF8B;
+}
+/* dev debug styles > */
+
+.sideleft
+{
+    position: relative;
+    left: 0;
+}
+.sideright
+{
+    position: relative;
+    right: 0;
+}
+.floatleft{float: left;}
+.floatright{float: right;}
+
+.fliphoriz
+{
+    -moz-transform: scale(-1, 1);
+    -webkit-transform: scale(-1, 1);
+    -o-transform: scale(-1, 1);
+    -ms-transform: scale(-1, 1);
+    transform: scale(-1, 1);
+}
+
+html, body
+{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+header
+{
+    // < debug
+    .redbox;
+    // debug >
+    
+    position:absolute;
+    top: 0px;
+    display: flex;
+    //margin-bottom: 20px;
+    flex-direction: row;
+    box-sizing: border-box;
+    width: 100%;
+    height: 50px;
+    //align-content: center;
+
+    .sectiontab
+    {
+        // < debug
+        .grybox;
+        // debug >
+        flex: 1;
+        display: flex;
+        box-sizing: border-box;
+        padding: 10px 0 0 10px;
+        justify-content: left;
+    }
+}
+
+.selectionsrow
+{
+    // < debug
+    //.redbox;
+    //opacity: 0.7;
+    // debug >
+    z-index:999;
+    position:absolute;
+    top: 50px;
+    display: flex;
+    //margin-bottom: 20px;
+    flex-direction: row;
+    box-sizing: border-box;
+    width: 100%;
+    //height: 50px;
+    //align-content: center;
+
+    .sectiontab
+    {
+        // < debug
+        //.grybox;
+        // debug >
+        z-index: 1000;
+        //opacity: 0.7;
+        flex: 1;
+        display: flex;
+        box-sizing: border-box;
+        padding-top: 0px;
+        justify-content: center;
+        flex-direction: column;
+
+        .navcolumn
+        {
+            z-index: 1100;
+            display: flex;
+            flex: 1;
+            box-sizing: border-box;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        div div:first
+        {
+            margin-top: 50px;
+        }
+        div div:hover
+        {
+            background-color: #CBCB1E;
+            color: #fff;
+            
+            a:hover
+            {
+                color: #fff;
+            }
+        }
+        div div
+        {
+            background-color: yellow;
+            padding: 10px;
+            
+            a
+            {
+                color: #000;
+                text-decoration: none;
+            }
+            a:hover
+            {
+                text-decoration: underline;
+            }
+
+        }
+    }
+}
+
+
+
+article
+{
+    // < debug
+    .grnbox;
+    // debug >
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+    margin: 0 0 10px 0;
+    padding: 10px;
+    justify-content: space-between;
+    align-items: stretch;
+
+    .img
+    {
+        // < debug
+        .redbox;
+        //opacity: 0.7;
+        // debug >
+        flex: 1;
+        //width: 50%;
+        height: 200px;
+    }
+
+    .column
+    {
+        // < debug
+        .ornjbox;
+        // debug >
+        flex: 1;
+        display: flex;
+        box-sizing: border-box;
+        flex-direction: column;
+        padding: 5px;
+        margin: 0 auto;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 12px;
+        color: #000;
+
+
+        span
+        {
+            color: #322C2C;
+            font-size: 18px;
+            font-weight: bold;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+    }
+}
+
+article:first-of-type .img
+{
+    background-image: url('viz/revolver1.png');
+}
+article:last-of-type .img
+{
+    background-image: url('viz/hostel2.png');
+}
+
+article:first-of-type
+{
+    margin-top: 50px;
+}
+// article:last-of-type
+// {
+//     margin-bottom: 200px;
+// }
+
+.revbutton
+{
+    margin: 0 0 10px 0;
+}
+
+.endcontent
+{
+    margin-bottom: 200px;
+}
+
+footer
+{
+    // < debug
+    .blubox;
+    // debug >
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 5px;
+    height: 200px;
+    width: 100%;
+}

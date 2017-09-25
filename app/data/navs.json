@@ -1,0 +1,10 @@
+[
+    { "nav" : [ 
+        {"navtitle":"Selection 1",
+        "destination": "#nowhere"},
+        {"navtitle":"Selection 2",
+        "destination": "#nowhere"},
+        {"navtitle":"Selection 3",
+        "destination": "#nowhere"} ]  
+    }
+]

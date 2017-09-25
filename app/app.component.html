@@ -1,0 +1,99 @@
+<!--The content below is only a placeholder and can be replaced.-->
+
+<header class="" [class.fliphoriz]='reversal'>
+  <div class="sectiontab" (mouseenter)="navFunc();navtab=true;navtab2=false;navtab3=false;">
+    Section Tab 1 (json)
+  </div>
+  <div class="sectiontab" (mouseenter)="navFunc();navtab2=true;navtab=false;navtab3=false;">
+    Section Tab 2
+  </div>
+  <div class="sectiontab" (mouseenter)="navFunc();navtab3=true;navtab=false;navtab2=false;">
+    Section Tab 3
+  </div>
+
+</header>
+
+<div class="selectionsrow" [class.fliphoriz]='reversal' *ngIf="navdrop">
+    <div class="sectiontab">
+      <div class="navcolumn" *ngFor="let navspot of navjson let i = index" (mouseleave)="navdrop = false;navtab=false;">
+        <!-- list items - This section FROM JSON -->
+        <div *ngIf="navtab"><a href={{navspot.destination}}>{{navspot.navtitle}}</a></div>
+        <!-- BUG:navcolumn height resulting in improper mouseout below first selection
+             Due to dynamic generated column links -->
+      </div>
+    </div>
+    <div class="sectiontab">
+      <div class="navcolumn" (mouseleave)="navdrop = false;navtab2=false;">
+        <!-- list items -->
+        <div *ngIf="navtab2">Link 2</div>
+        <div *ngIf="navtab2">Link 2</div>
+        <div *ngIf="navtab2">Link 2</div>
+      </div>
+    </div>
+    <div class="sectiontab">
+      <div class="navcolumn" (mouseleave)="navdrop = false;navtab3=false;">
+        <!-- list items -->
+        <div *ngIf="navtab3">Link 3</div>
+        <div *ngIf="navtab3">Link 3</div>
+        <div *ngIf="navtab3">Link 3</div>
+      </div>
+    </div>
+  
+  </div>
+
+  <!-- < gen from json -->
+  <!-- < DID TOO MUCH TOO SOON - dynamic nav -->
+  <!-- REQUIRES: In app.component, 
+    Comment the 1st navjson & 
+    uncomment the 2nd one --> 
+  <!-- <div class="selectionsrow" [class.fliphoriz]='reversal' *ngIf="navdrop">
+    <div class="sectiontab" *ngFor="let navspot of navjson let i = index">
+      <div class="navcolumn" *ngFor="let navcolumn of navjson[i].nav" (mouseleave)="navdrop = false;navtab=false;"> -->
+        <!-- list items - FROM JSON -->
+        <!-- <div *ngIf="navtab"><a href={{navcolumn.destination}}>{{navcolumn.navtitle}}</a></div> -->
+        <!-- BUG:navcolumn height resulting in improper mouseout below first selection
+              Due to dynamic generated column links -->
+      <!-- </div>
+    </div>
+  </div> -->
+  <!-- DID TOO MUCH TOO SOON - dynamic nav > -->
+  <!-- gen from json > -->
+
+<article class="" [class.fliphoriz]='reversal'>
+<!-- ISSUE: Interpolation timing. Following line --> 
+<!-- <article [innerHTML]='articleimg' class="" [class.fliphoriz]='reversal'> -->    
+  <div class="img"></div>
+  <!-- <div [innerHTML]='articleimg'></div> -->
+  <div class="column">
+    <span>
+      Title Text
+    </span>
+    Revolver is a 2005 British-French crime thriller film co-written and directed by Guy Ritchie and starring Jason Statham, Ray Liotta, Vincent Pastore and André Benjamin. The film centres on a revenge-seeking confidence trickster whose weapon is a universal formula that guarantees victory to its user, when applied to any game or confidence trick.
+    
+    This is the fourth feature film by Ritchie and his third to centre on crime and professional criminals. It was released in UK theatres on 22 September 2005. It performed poorly at the box office and received negative reviews but has gained a small cult following among fans of Guy Ritchie's previous crime films. A reworked version[2] was released to a limited number of US theatres on 7 December 2007
+  </div>
+</article>
+
+<article class="" [class.fliphoriz]='reversal'>
+  <!-- <div class="img"></div> -->
+  <div class="column">
+    <span>
+      Title Text
+    </span>
+    Hostel: Part II is a 2007 American splatter film written and directed by Eli Roth, and the sequel to his 2005 horror film Hostel. It stars Lauren German, Roger Bart, Heather Matarazzo, Bijou Phillips, and Richard Burgi and was produced by Chris Briggs, Mike Fleiss, and Eli Roth; Boaz Yakin, Scott Spiegel, and Quentin Tarantino are executive producers. Like its predecessor, the film is set in Slovakia and centers on a facility in which rich clients pay to torture (to death, which is mandatory) kidnapped victims.
+    
+    The film did not perform as well as the original, totaling $17 million in the US by the end of its theatrical run[2] whereas the original made $19 million in its opening weekend.
+  </div>
+  <div class="img"></div>
+</article>
+
+<button (click)="this.reversal = !this.reversal;" class="revbutton" value="Reversal Button">
+Reversal Button
+</button>
+
+<div class="endcontent"> </div>
+
+<footer>
+
+</footer>
+
